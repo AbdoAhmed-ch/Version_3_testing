@@ -1,0 +1,73 @@
+
+  <svg width="1200" height="420" viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="shadow3ar" x="-5%" y="-5%" width="110%" height="115%">
+        <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#0F172A" flood-opacity="0.04"/>
+      </filter>
+    </defs>
+    
+    <!-- White Background -->
+    <rect width="1200" height="420" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    
+    <!-- Title -->
+    <text x="600" y="48" text-anchor="middle" fill="#0F172A" font-size="20" font-weight="800" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">
+      منظومة التعلم الذكية في شاميليون (CHAMELEON LEARNING SYSTEM)
+    </text>
+    <text x="600" y="74" text-anchor="middle" fill="#64748B" font-size="13" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">
+      الركائز الوظيفية والتقنية الأساسية المهندسة لطلاب كلية الحاسبات والبيانات والذكاء الاصطناعي — جامعة الإسكندرية
+    </text>
+    
+    <!-- Pillar 1 (Rightmost in visual, translate 810) -> Formative Assessment -->
+    <g transform="translate(810, 105)" filter="url(#shadow3ar)">
+      <rect width="330" height="175" rx="12" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1.5"/>
+      <circle cx="285" cy="45" r="20" fill="#0284C7" fill-opacity="0.12"/>
+      <path d="M277 45 L283 51 L293 39" stroke="#0284C7" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="250" y="42" text-anchor="end" fill="#0F172A" font-size="16" font-weight="800" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">التقييم التكويني والممارسة</text>
+      <text x="250" y="62" text-anchor="end" fill="#0284C7" font-size="13" font-weight="600" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">تدريب تفاعلي ذاتي مستمر</text>
+      
+      <line x1="25" y1="85" x2="305" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="295" y="112" text-anchor="end" fill="#0284C7" font-size="14" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• 211 اختباراً تفاعلياً منشوراً</text>
+      <text x="295" y="134" text-anchor="end" fill="#334155" font-size="13" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• تغذية راجعة فورية وأنماط امتحانات</text>
+      <text x="295" y="156" text-anchor="end" fill="#334155" font-size="13" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• دعم معادلات KaTeX والجداول العلمية</text>
+    </g>
+
+    <!-- Pillar 2 (Center translate 435) -> Marline AI Advisor -->
+    <g transform="translate(435, 105)" filter="url(#shadow3ar)">
+      <rect width="330" height="175" rx="12" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+      <circle cx="285" cy="45" r="20" fill="#4F46E5" fill-opacity="0.12"/>
+      <circle cx="285" cy="45" r="9" stroke="#4F46E5" stroke-width="2.2" fill="none"/>
+      <path d="M285 31 L285 34 M285 56 L285 59 M271 45 L274 45 M296 45 L299 45" stroke="#4F46E5" stroke-width="2.2"/>
+      <text x="250" y="42" text-anchor="end" fill="#0F172A" font-size="16" font-weight="800" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">مستشار الذكاء الاصطناعي مارلين</text>
+      <text x="250" y="62" text-anchor="end" fill="#4F46E5" font-size="13" font-weight="600" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">فهم كامل للائحة وسياق المقررات</text>
+      
+      <line x1="25" y1="85" x2="305" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="295" y="112" text-anchor="end" fill="#4F46E5" font-size="14" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• موجه ذكي خماسي الطبقات للجاهزية</text>
+      <text x="295" y="134" text-anchor="end" fill="#334155" font-size="13" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• تأطير بلائحة كلية الحاسبات FCDS</text>
+      <text x="295" y="156" text-anchor="end" fill="#334155" font-size="13" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• حصة استهلاك يومية (20 سؤالاً/يوم)</text>
+    </g>
+
+    <!-- Pillar 3 (Leftmost in visual, translate 60) -> Mathematics Engines -->
+    <g transform="translate(60, 105)" filter="url(#shadow3ar)">
+      <rect width="330" height="175" rx="12" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5"/>
+      <circle cx="285" cy="45" r="20" fill="#059669" fill-opacity="0.12"/>
+      <path d="M277 38 L282 52 L288 42 L293 50" stroke="#059669" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="250" y="42" text-anchor="end" fill="#0F172A" font-size="16" font-weight="800" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">محركات الحلول الرياضية</text>
+      <text x="250" y="62" text-anchor="end" fill="#059669" font-size="13" font-weight="600" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">جبر خطي متقدم على جانب المتصفح</text>
+      
+      <line x1="25" y1="85" x2="305" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="295" y="112" text-anchor="end" fill="#059669" font-size="14" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• تحليل المصفوفات LU و QR بالخطوات</text>
+      <text x="295" y="134" text-anchor="end" fill="#334155" font-size="13" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• حساب المحددات، المعكوسات، والقيم الذاتية</text>
+      <text x="295" y="156" text-anchor="end" fill="#334155" font-size="13" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• رسم وتصور الدوال والمنحنيات فورياً</text>
+    </g>
+
+    <!-- Bottom Curricular Anchor -->
+    <g transform="translate(60, 310)" filter="url(#shadow3ar)">
+      <rect width="1080" height="70" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+      <text x="540" y="42" text-anchor="middle" fill="#0F172A" font-size="15" font-weight="800" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">
+        الهيكل الأكاديمي: 6 أقسام علمية  |  4 فرق دراسية  |  كلية الحاسبات والبيانات — جامعة الإسكندرية
+      </text>
+      <text x="540" y="62" text-anchor="middle" fill="#64748B" font-size="12" font-weight="500" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">
+        الذكاء الاصطناعي • علوم الحاسب • الأمن السيبراني • تحليلات الأعمال • المعلوماتية الصحية • تحليلات الوسائط
+      </text>
+    </g>
+  </svg>

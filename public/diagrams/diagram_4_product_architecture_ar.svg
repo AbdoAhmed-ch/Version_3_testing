@@ -1,0 +1,81 @@
+
+  <svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="shadow4ar" x="-5%" y="-5%" width="110%" height="115%">
+        <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.04"/>
+      </filter>
+    </defs>
+    
+    <!-- White Background -->
+    <rect width="1200" height="560" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    
+    <!-- Title -->
+    <text x="600" y="40" text-anchor="middle" fill="#0F172A" font-size="15" font-weight="800" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">
+      المعمارية التقنية للمنصة والقدرات التشغيلية (PRODUCT ARCHITECTURE)
+    </text>
+
+    <!-- TIER 1: CLIENT USER INTERFACE -->
+    <g transform="translate(100, 65)" filter="url(#shadow4ar)">
+      <rect width="1000" height="85" rx="12" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1.5"/>
+      <text x="500" y="36" text-anchor="middle" fill="#0284C7" font-size="16" font-weight="800" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">
+        واجهة المستخدم وتفاعل المتصفح (CLIENT USER INTERFACE)
+      </text>
+      <text x="500" y="60" text-anchor="middle" fill="#334155" font-size="14" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+        Next.js 14 App Router  |  React 18  |  Tailwind CSS  |  Framer Motion  |  KaTeX Math
+      </text>
+    </g>
+
+    <!-- ARROW 1 -->
+    <path d="M600 150 L600 190" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4,4"/>
+    <polygon points="596,188 600,196 604,188" fill="#94A3B8"/>
+    <rect x="445" y="163" width="310" height="22" rx="11" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="600" y="178" text-anchor="middle" fill="#0284C7" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+      HTTPS  /  Server Actions  /  Server-Sent Events (SSE)
+    </text>
+
+    <!-- TIER 2: EDGE & SERVERLESS MIDDLEWARE -->
+    <g transform="translate(100, 205)" filter="url(#shadow4ar)">
+      <rect width="1000" height="85" rx="12" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+      <text x="500" y="36" text-anchor="middle" fill="#4F46E5" font-size="16" font-weight="800" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">
+        الطبقة الوسيطة والحوسبة السحابية الطرفية (EDGE &amp; SERVERLESS MIDDLEWARE)
+      </text>
+      <text x="500" y="60" text-anchor="middle" fill="#334155" font-size="14" font-weight="600" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">
+        دوال Vercel Edge الحركية  |  محدد معدل الطلبات بالذاكرة (Sliding Window)  |  تصفية البوتات والكشط
+      </text>
+    </g>
+
+    <!-- SPLIT ARROWS -->
+    <path d="M350 290 L350 335" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4,4"/>
+    <polygon points="346,333 350,341 354,333" fill="#94A3B8"/>
+    
+    <path d="M850 290 L850 335" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4,4"/>
+    <polygon points="846,333 850,341 854,333" fill="#94A3B8"/>
+
+    <!-- TIER 3 LEFT: SUPABASE POSTGRESQL -->
+    <g transform="translate(100, 345)" filter="url(#shadow4ar)">
+      <rect width="480" height="185" rx="12" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5"/>
+      <text x="240" y="35" text-anchor="middle" fill="#059669" font-size="16" font-weight="800" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">
+        قاعدة بيانات سوبابيز بوستجرس (SUPABASE POSTGRESQL)
+      </text>
+      <line x1="30" y1="52" x2="450" y2="52" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="440" y="78" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• جدول chameleons <tspan fill="#64748B" font-weight="500">(5,298 حساب مستخدم مسجل)</tspan></text>
+      <text x="440" y="103" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• جدول quiz_data <tspan fill="#64748B" font-weight="500">(21,161 محاولة اختبار مكتملة)</tspan></text>
+      <text x="440" y="128" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• جدول quiz_department <tspan fill="#64748B" font-weight="500">(211 اختبار نشط)</tspan></text>
+      <text x="440" y="153" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• سياسات أمان مستوى الصف (RLS) وفهارس B-Tree</text>
+      <text x="440" y="175" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• إجراءات PL/pgSQL الذرية <tspan fill="#64748B" font-weight="500">(تسجيل العملات ورصيد الذكاء)</tspan></text>
+    </g>
+
+    <!-- TIER 3 RIGHT: MARLINE AI 5-TIER ROUTER -->
+    <g transform="translate(620, 345)" filter="url(#shadow4ar)">
+      <rect width="480" height="185" rx="12" fill="#FFFBEB" stroke="#FCD34D" stroke-width="1.5"/>
+      <text x="240" y="35" text-anchor="middle" fill="#D97706" font-size="16" font-weight="800" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">
+        موجه الذكاء الاصطناعي مارلين (5-TIER ROUTER)
+      </text>
+      <line x1="30" y1="52" x2="450" y2="52" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="440" y="78" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• الطبقة 1: <tspan fill="#B45309">Cerebras</tspan> <tspan fill="#64748B" font-weight="500">(gpt-oss-120b - استجابة فائقة السرعة)</tspan></text>
+      <text x="440" y="103" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• الطبقة 2: <tspan fill="#B45309">Groq Inference</tspan> <tspan fill="#64748B" font-weight="500">(qwen3.8-27b / gpt-oss)</tspan></text>
+      <text x="440" y="128" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• الطبقة 3: <tspan fill="#B45309">Google Gemini</tspan> <tspan fill="#64748B" font-weight="500">(gemini-2.5-flash سياقات واسعة)</tspan></text>
+      <text x="440" y="153" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• الطبقة 4: <tspan fill="#B45309">OpenRouter</tspan> <tspan fill="#64748B" font-weight="500">(nemotron-3.5 طبقة مساندة واحتياط)</tspan></text>
+      <text x="440" y="175" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• الطبقة 5: <tspan fill="#B45309">Cloudflare Workers AI</tspan> <tspan fill="#64748B" font-weight="500">(@cf/qwen3.8-27b طرفية)</tspan></text>
+    </g>
+  </svg>

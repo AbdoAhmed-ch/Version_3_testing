@@ -1,0 +1,81 @@
+
+  <svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="shadow4" x="-5%" y="-5%" width="110%" height="115%">
+        <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.04"/>
+      </filter>
+    </defs>
+    
+    <!-- White Background -->
+    <rect width="1200" height="560" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    
+    <!-- Title -->
+    <text x="600" y="40" text-anchor="middle" fill="#0F172A" font-size="14" font-weight="800" letter-spacing="2.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+      PRODUCT ARCHITECTURE AND TECHNICAL CAPABILITIES
+    </text>
+
+    <!-- TIER 1: CLIENT USER INTERFACE -->
+    <g transform="translate(100, 65)" filter="url(#shadow4)">
+      <rect width="1000" height="85" rx="12" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1.5"/>
+      <text x="500" y="36" text-anchor="middle" fill="#0284C7" font-size="16" font-weight="800" letter-spacing="1.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+        CLIENT USER INTERFACE
+      </text>
+      <text x="500" y="60" text-anchor="middle" fill="#334155" font-size="14" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+        Next.js 14 App Router  |  React 18  |  Tailwind CSS  |  Framer Motion  |  KaTeX Math
+      </text>
+    </g>
+
+    <!-- ARROW 1 -->
+    <path d="M600 150 L600 190" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4,4"/>
+    <polygon points="596,188 600,196 604,188" fill="#94A3B8"/>
+    <rect x="465" y="163" width="270" height="22" rx="11" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="600" y="178" text-anchor="middle" fill="#0284C7" font-size="11" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+      HTTPS  /  Server Actions  /  SSE Stream
+    </text>
+
+    <!-- TIER 2: EDGE & SERVERLESS MIDDLEWARE -->
+    <g transform="translate(100, 205)" filter="url(#shadow4)">
+      <rect width="1000" height="85" rx="12" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+      <text x="500" y="36" text-anchor="middle" fill="#4F46E5" font-size="16" font-weight="800" letter-spacing="1.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+        EDGE &amp; SERVERLESS MIDDLEWARE
+      </text>
+      <text x="500" y="60" text-anchor="middle" fill="#334155" font-size="14" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+        Vercel Edge Functions  |  In-Memory Sliding Window Rate Limiter  |  Bot &amp; Scraper Filtering
+      </text>
+    </g>
+
+    <!-- SPLIT ARROWS -->
+    <path d="M350 290 L350 335" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4,4"/>
+    <polygon points="346,333 350,341 354,333" fill="#94A3B8"/>
+    
+    <path d="M850 290 L850 335" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4,4"/>
+    <polygon points="846,333 850,341 854,333" fill="#94A3B8"/>
+
+    <!-- TIER 3 LEFT: SUPABASE POSTGRESQL -->
+    <g transform="translate(100, 345)" filter="url(#shadow4)">
+      <rect width="480" height="185" rx="12" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5"/>
+      <text x="240" y="35" text-anchor="middle" fill="#059669" font-size="16" font-weight="800" letter-spacing="1.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+        SUPABASE POSTGRESQL
+      </text>
+      <line x1="30" y1="52" x2="450" y2="52" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="40" y="78" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• chameleons Table <tspan fill="#64748B" font-weight="500">(5,298 Registered Accounts)</tspan></text>
+      <text x="40" y="103" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• quiz_data Table <tspan fill="#64748B" font-weight="500">(21,161 Completed Attempts)</tspan></text>
+      <text x="40" y="128" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• quiz_department Table <tspan fill="#64748B" font-weight="500">(211 Live Quizzes)</tspan></text>
+      <text x="40" y="153" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• Row-Level Security (RLS) &amp; B-Tree Performance Indexes</text>
+      <text x="40" y="175" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• Atomic PL/pgSQL RPC Procedures <tspan fill="#64748B" font-weight="500">(Coins &amp; AI Credits)</tspan></text>
+    </g>
+
+    <!-- TIER 3 RIGHT: MARLINE AI 5-TIER ROUTER -->
+    <g transform="translate(620, 345)" filter="url(#shadow4)">
+      <rect width="480" height="185" rx="12" fill="#FFFBEB" stroke="#FCD34D" stroke-width="1.5"/>
+      <text x="240" y="35" text-anchor="middle" fill="#D97706" font-size="16" font-weight="800" letter-spacing="1.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+        MARLINE AI 5-TIER ROUTER
+      </text>
+      <line x1="30" y1="52" x2="450" y2="52" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="40" y="78" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• Layer 1: <tspan fill="#B45309">Cerebras</tspan> <tspan fill="#64748B" font-weight="500">(gpt-oss-120b - Ultra Fast Tier)</tspan></text>
+      <text x="40" y="103" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• Layer 2: <tspan fill="#B45309">Groq Inference</tspan> <tspan fill="#64748B" font-weight="500">(qwen3.8-27b / gpt-oss)</tspan></text>
+      <text x="40" y="128" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• Layer 3: <tspan fill="#B45309">Google Gemini</tspan> <tspan fill="#64748B" font-weight="500">(gemini-2.5-flash High Context)</tspan></text>
+      <text x="40" y="153" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• Layer 4: <tspan fill="#B45309">OpenRouter</tspan> <tspan fill="#64748B" font-weight="500">(nemotron-3.5 Backup Tier)</tspan></text>
+      <text x="40" y="175" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• Layer 5: <tspan fill="#B45309">Cloudflare Workers AI</tspan> <tspan fill="#64748B" font-weight="500">(@cf/qwen3.8-27b Edge)</tspan></text>
+    </g>
+  </svg>

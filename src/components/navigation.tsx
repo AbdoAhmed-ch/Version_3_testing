@@ -381,7 +381,7 @@ export default function Navigation() {
 
             {/* Desktop Navigation — pure CSS entrance */}
             <nav
-              className={`hidden lg:flex items-center gap-3 xl:gap-6 2xl:gap-8 ${mounted ? 'animate-nav-items' : 'opacity-0'}`}
+              className={`hidden lg:flex items-center gap-1 xl:gap-2 ${mounted ? 'animate-nav-items' : 'opacity-0'}`}
             >
               {navItems.map((item) => (
                 <div key={item.name} className="shrink-0">
@@ -389,29 +389,26 @@ export default function Navigation() {
                     <div className="relative">
                       <button
                         onClick={() => setIsSpecializationsOpen(!isSpecializationsOpen)}
-                        className="flex items-center gap-1.5 xl:gap-2 text-foreground/70 hover:text-foreground transition-colors duration-200 group specializations-trigger whitespace-nowrap text-sm font-medium"
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-foreground/80 hover:text-foreground hover:bg-muted/70 transition-all duration-200 group specializations-trigger whitespace-nowrap text-sm font-medium"
                       >
-                        <item.icon className="w-4 h-4 shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                        <span className="relative whitespace-nowrap">
-                          {item.name}
-                          <span className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full w-0 group-hover:w-full transition-all duration-300" />
-                        </span>
+                        <item.icon className="w-4 h-4 shrink-0 group-hover:scale-110 transition-transform duration-200" />
+                        <span className="relative whitespace-nowrap">{item.name}</span>
                         <ChevronDown className={`w-3.5 h-3.5 shrink-0 transition-transform duration-200 ${isSpecializationsOpen ? 'rotate-180' : ''}`} />
                       </button>
 
                       {isSpecializationsOpen && (
                         <div
-                          className="absolute top-full left-0 mt-2 w-80 max-h-[60vh] overflow-y-auto custom-scrollbar overscroll-contain pointer-events-auto bg-background border border-border rounded-lg shadow-2xl specializations-menu z-50 animate-dropdown-enter"
+                          className="absolute top-full left-0 mt-2 w-80 max-h-[60vh] overflow-y-auto custom-scrollbar overscroll-contain pointer-events-auto bg-popover/95 backdrop-blur-md border border-border/40 rounded-2xl shadow-2xl specializations-menu z-50 animate-dropdown-enter"
                           data-lenis-prevent="true"
                         >
-                          <div className="p-4">
-                            <h3 className=" font-semibold mb-3 text-sm uppercase tracking-wide">Available Specializations</h3>
-                            <div className="space-y-2">
+                          <div className="p-3">
+                            <h3 className="font-semibold mb-2 text-xs uppercase tracking-wider text-muted-foreground px-2">Available Specializations</h3>
+                            <div className="space-y-1">
                               {specializations.map((spec) => (
                                 <div key={spec.name}>
-                                  <Link href={spec.href} onClick={() => setIsSpecializationsOpen(false)} className="block p-3 rounded-lg hover:bg-muted transition-colors duration-200 group">
-                                    <div className=" font-medium group-hover:text-primary transition-colors">{spec.name}</div>
-                                    <div className="text-muted-foreground text-sm mt-1">{spec.description}</div>
+                                  <Link href={spec.href} onClick={() => setIsSpecializationsOpen(false)} className="block p-3 rounded-xl hover:bg-muted/80 transition-colors duration-200 group">
+                                    <div className="font-medium group-hover:text-primary transition-colors text-sm">{spec.name}</div>
+                                    <div className="text-muted-foreground text-xs mt-0.5 line-clamp-2">{spec.description}</div>
                                   </Link>
                                 </div>
                               ))}
@@ -421,13 +418,13 @@ export default function Navigation() {
                       )}
                     </div>
                   ) : item.name === "Explo" ? (
-                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 xl:gap-2 text-foreground/70 hover:text-foreground transition-colors duration-200 group whitespace-nowrap text-sm font-medium">
-                      <item.icon className="w-4 h-4 shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-foreground/80 hover:text-foreground hover:bg-muted/70 transition-all duration-200 group whitespace-nowrap text-sm font-medium">
+                      <item.icon className="w-4 h-4 shrink-0 group-hover:scale-110 transition-transform duration-200" />
                       <span className="relative whitespace-nowrap">{item.name}</span>
                     </a>
                   ) : (
-                    <Link href={item.href} onClick={(e) => handleNavigation(e, item)} className="flex items-center gap-1.5 xl:gap-2 text-foreground/70 hover:text-foreground transition-colors duration-200 group whitespace-nowrap text-sm font-medium">
-                      <item.icon className="w-4 h-4 shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                    <Link href={item.href} onClick={(e) => handleNavigation(e, item)} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-foreground/80 hover:text-foreground hover:bg-muted/70 transition-all duration-200 group whitespace-nowrap text-sm font-medium">
+                      <item.icon className="w-4 h-4 shrink-0 group-hover:scale-110 transition-transform duration-200" />
                       <span className="relative whitespace-nowrap">{item.name}</span>
                     </Link>
                   )}

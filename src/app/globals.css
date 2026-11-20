@@ -278,14 +278,33 @@ body::-webkit-scrollbar {
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Material Design 3 Semantic Surface & Container Tokens */
+  --color-m3-surface: var(--md-sys-color-surface);
+  --color-m3-surface-dim: var(--md-sys-color-surface-dim);
+  --color-m3-surface-bright: var(--md-sys-color-surface-bright);
+  --color-m3-surface-container-lowest: var(--md-sys-color-surface-container-lowest);
+  --color-m3-surface-container-low: var(--md-sys-color-surface-container-low);
+  --color-m3-surface-container: var(--md-sys-color-surface-container);
+  --color-m3-surface-container-high: var(--md-sys-color-surface-container-high);
+  --color-m3-surface-container-highest: var(--md-sys-color-surface-container-highest);
+  --color-m3-on-surface: var(--md-sys-color-on-surface);
+  --color-m3-on-surface-variant: var(--md-sys-color-on-surface-variant);
+  --color-m3-outline: var(--md-sys-color-outline);
+  --color-m3-outline-variant: var(--md-sys-color-outline-variant);
+
+  /* Material Design 3 Shape Scale */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 1.75rem;
+  --radius-full: 9999px;
 }
 
 :root {
-  --radius: 0.5rem;
+  --radius: 0.75rem;
   --background: hsl(0 0% 100%);
   --foreground: hsl(180 5% 10%);
   --card: hsl(0 0% 100%);
@@ -318,6 +337,28 @@ body::-webkit-scrollbar {
   --sidebar-accent-foreground: hsl(142 64% 20%);
   --sidebar-border: hsl(142 20% 91%);
   --sidebar-ring: hsl(44 98% 57%);
+
+  /* Material Design 3 Palette & Surface Tokens (Light Mode) */
+  --md-sys-color-primary: #10B981;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #D1FAE5;
+  --md-sys-color-on-primary-container: #064E3B;
+  --md-sys-color-secondary: #059669;
+  --md-sys-color-on-secondary: #FFFFFF;
+  --md-sys-color-secondary-container: #ECFDF5;
+  --md-sys-color-on-secondary-container: #065F46;
+  --md-sys-color-surface: #FFFFFF;
+  --md-sys-color-surface-dim: #F3F4F6;
+  --md-sys-color-surface-bright: #FFFFFF;
+  --md-sys-color-surface-container-lowest: #FFFFFF;
+  --md-sys-color-surface-container-low: #F9FAFB;
+  --md-sys-color-surface-container: #F3F4F6;
+  --md-sys-color-surface-container-high: #E5E7EB;
+  --md-sys-color-surface-container-highest: #D1D5DB;
+  --md-sys-color-on-surface: #111827;
+  --md-sys-color-on-surface-variant: #4B5563;
+  --md-sys-color-outline: #9CA3AF;
+  --md-sys-color-outline-variant: #E5E7EB;
 }
 
 /* Mobile specializations scrollbar — thin + themed */
@@ -375,6 +416,64 @@ body::-webkit-scrollbar {
   --sidebar-accent-foreground: hsl(142 20% 90%);
   --sidebar-border: hsl(142 15% 18%);
   --sidebar-ring: hsl(44 98% 57%);
+
+  /* Material Design 3 Palette & Surface Tokens (Dark Mode) */
+  --md-sys-color-primary: #34D399;
+  --md-sys-color-on-primary: #064E3B;
+  --md-sys-color-primary-container: #065F46;
+  --md-sys-color-on-primary-container: #A7F3D0;
+  --md-sys-color-secondary: #6EE7B7;
+  --md-sys-color-on-secondary: #064E3B;
+  --md-sys-color-secondary-container: #047857;
+  --md-sys-color-on-secondary-container: #D1FAE5;
+  --md-sys-color-surface: #0A0E17;
+  --md-sys-color-surface-dim: #0A0E17;
+  --md-sys-color-surface-bright: #1E293B;
+  --md-sys-color-surface-container-lowest: #050811;
+  --md-sys-color-surface-container-low: #0F172A;
+  --md-sys-color-surface-container: #131E32;
+  --md-sys-color-surface-container-high: #1E293B;
+  --md-sys-color-surface-container-highest: #334155;
+  --md-sys-color-on-surface: #F8FAFC;
+  --md-sys-color-on-surface-variant: #94A3B8;
+  --md-sys-color-outline: #64748B;
+  --md-sys-color-outline-variant: #1E293B;
+}
+
+/* Material Design 3 Elevation & Motion Utility Classes */
+.m3-elevation-0 { box-shadow: none !important; }
+.m3-elevation-1 { box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.08), 0px 1px 2px 0px rgba(0, 0, 0, 0.12) !important; }
+.m3-elevation-2 { box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.08), 0px 1px 2px 0px rgba(0, 0, 0, 0.12) !important; }
+.m3-elevation-3 { box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15), 0px 4px 8px 3px rgba(0, 0, 0, 0.08) !important; }
+.m3-elevation-4 { box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15), 0px 6px 10px 4px rgba(0, 0, 0, 0.08) !important; }
+.m3-elevation-5 { box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20), 0px 8px 12px 6px rgba(0, 0, 0, 0.10) !important; }
+
+.m3-card {
+  border-radius: 1.5rem !important; /* M3 24px Card Shape */
+  transition: box-shadow 0.25s cubic-bezier(0.2, 0, 0, 1), transform 0.25s cubic-bezier(0.2, 0, 0, 1);
+}
+.m3-card:hover {
+  box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.18) !important;
+}
+
+.m3-state-layer {
+  position: relative;
+  overflow: hidden;
+}
+.m3-state-layer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: currentColor;
+  opacity: 0;
+  transition: opacity 0.2s cubic-bezier(0.2, 0, 0, 1);
+  pointer-events: none;
+}
+.m3-state-layer:hover::after {
+  opacity: 0.08;
+}
+.m3-state-layer:active::after {
+  opacity: 0.12;
 }
 
 /* Theme Palettes */

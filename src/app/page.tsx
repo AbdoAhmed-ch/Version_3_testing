@@ -444,23 +444,23 @@ export default function HomePage() {
                         }}
                       />
 
-                      <Card className="relative h-full overflow-hidden border border-border/50 bg-background/50 dark:bg-black/40 backdrop-blur-xl transition-all duration-500 group-hover:bg-background/80 dark:group-hover:bg-black/80 rounded-2xl group-hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:group-hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)]">
+                      <Card className="relative h-full overflow-hidden border border-border/40 bg-surface-container-low/60 dark:bg-card/60 backdrop-blur-xl transition-all duration-300 group-hover:bg-surface-container-high/80 dark:group-hover:bg-card/90 rounded-3xl m3-elevation-1 group-hover:m3-elevation-3">
                         <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-transparent to-${spec.color.split('-')[1]}-500/10 rounded-bl-full -z-10 transition-all duration-500 group-hover:scale-150`}></div>
                         <CardHeader className="relative z-10 pb-4">
-                          <div className={`inline-flex items-center justify-center size-14 rounded-xl border ${spec.color} bg-background mb-5 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-6 shadow-sm`}>
+                          <div className={`inline-flex items-center justify-center size-14 rounded-2xl border ${spec.color} bg-background/80 mb-5 transition-all duration-300 group-hover:scale-105 shadow-sm`}>
                             <spec.icon className="w-7 h-7" />
                           </div>
                           <CardTitle className="text-2xl mb-2 font-bold group-hover:text-primary transition-colors">{spec.title}</CardTitle>
                           <CardDescription className="text-muted-foreground text-sm leading-relaxed">{spec.description}</CardDescription>
                         </CardHeader>
                         <CardContent className="relative z-10">
-                          <div className="flex flex-col gap-3 text-sm font-medium mt-2">
-                            <div className="flex items-center gap-3 bg-muted/50 p-2.5 rounded-lg border border-border/50 group-hover:border-border transition-colors">
-                              <div className="bg-primary/10 p-1.5 rounded-md"><BookOpen className="size-4 text-primary" /></div>
+                          <div className="flex flex-col gap-2.5 text-sm font-medium mt-2">
+                            <div className="flex items-center gap-3 bg-muted/40 p-3 rounded-xl border border-border/30 group-hover:border-border/60 transition-colors">
+                              <div className="bg-primary/10 p-1.5 rounded-lg"><BookOpen className="size-4 text-primary" /></div>
                               <span className="text-foreground/80">{spec.courses} Comprehensive Courses</span>
                             </div>
-                            <div className="flex items-center gap-3 bg-muted/50 p-2.5 rounded-lg border border-border/50 group-hover:border-border transition-colors">
-                              <div className="bg-secondary/10 p-1.5 rounded-md"><Users className="size-4 text-secondary" /></div>
+                            <div className="flex items-center gap-3 bg-muted/40 p-3 rounded-xl border border-border/30 group-hover:border-border/60 transition-colors">
+                              <div className="bg-secondary/10 p-1.5 rounded-lg"><Users className="size-4 text-secondary" /></div>
                               <span className="text-foreground/80">{spec.students}</span>
                             </div>
                           </div>
