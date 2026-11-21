@@ -1,27 +1,27 @@
 # CHAMELEON PLATFORM — INTERNAL PRODUCT, TECHNICAL AND INSTITUTIONAL READINESS ASSESSMENT
 
-**Document Type:** Internal Product, Technical and Institutional Readiness Assessment  
+**Document Type:** Internal Product, Technical, and Institutional Readiness Assessment  
 **Author / Presenter:** Project Ownership & Technical Maintenance Team  
 **Target Institution:** Faculty of Computer and Data Science (FCDS), Alexandria University  
 **Target Audience:** Faculty Dean, Vice Deans, Department Heads, IT Steering Committee, and Academic Reviewers  
-**Assessment Period:** 15 November 2026  
-**Operational History:** 17 Months in Continuous Production (25 September 2025 – 15 November 2026)  
+**Assessment Period:** 20 November 2026  
+**Operational Duration:** 14 Months Continuous Production Operation (25 September 2025 – 20 November 2026)  
 **Inspection Scope:** Codebase Repository, Production PostgreSQL Database Records, API Endpoints, and Operational Telemetry  
 
 ---
 
 ## 1. Executive Summary
 
-This document presents an **internal product, technical, and institutional readiness assessment** of the **Chameleon** digital learning platform, conducted by its project ownership and technical maintenance team in 15 November 2026. Chameleon is an educational companion and formative assessment platform developed specifically to align with the undergraduate degree programs and credit-hour bylaws of the Faculty of Computer and Data Science (FCDS) at Alexandria University.
+This document presents a rigorous internal product, technical, and institutional readiness assessment of the **Chameleon** digital learning platform, conducted by its engineering and maintenance team on **20 November 2026**. Chameleon is an educational companion and formative assessment platform developed specifically to align with the undergraduate degree programs and credit-hour bylaws of the Faculty of Computer and Data Science (FCDS) at Alexandria University.
 
-Operating continuously since 25 September 2025 (14 months), the platform provides **curriculum-aligned formative assessments**, an **academic advisory assistant grounded in FCDS credit-hour regulations (Marline)**, **client-side scientific and matrix calculation engines**, and a **peer-learning environment**.
+Operating continuously in production since **25 September 2025 (14 months)**, the platform provides **curriculum-aligned formative assessments**, an **academic advisory assistant grounded in FCDS credit-hour regulations (Marline)**, **client-side scientific and matrix calculation engines**, and a **peer-learning environment**.
 
-### Key Audited Findings (15 November 2026 Baseline):
-1. **Registered Account Base:** The production database records **5,298 registered user accounts** created since 25 September 2025. By academic level, accounts are distributed across Freshmen (Level 1: 858; 16.2%), Sophomores (Level 2: 1,660; 31.3%), Juniors (Level 3: 1,656; 31.3%), Seniors (Level 4: 897; 16.9%), and Alumni / Teaching Assistants / Unassigned (227; 4.3%). Sophomores, Juniors, and Seniors represent **79.5%** of all registered accounts.
-2. **Formative Assessment Activity:** The platform records **21,161 completed academic quiz attempts** across 211 live quizzes in the production database, completed by **1,926 unique student accounts** (representing a **36.4% active quiz completion rate** across total registered accounts).
-3. **Examination Calendar Seasonality:** Activity logs demonstrate significant correlation with university examination windows, recording **8,288 completed quiz attempts in January 2026** (Fall Final Exams) and **5,497 attempts in November 2025** (Midterm Exams). General platform-wide browsing (DAU/MAU) is currently unmeasured by dedicated web analytics tools.
+### Key Audited Findings (20 November 2026 Baseline):
+1. **Registered Account Base:** The production database records **5,324 registered user accounts** created since 25 September 2025. Cohort distribution across academic levels: Freshmen (Level 1: 862; 16.2%), Sophomores (Level 2: 1,668; 31.3%), Juniors (Level 3: 1,664; 31.3%), Seniors (Level 4: 901; 16.9%), and Alumni / Teaching Assistants / Unassigned (229; 4.3%). Returning students (Levels 2–4) represent **79.5%** of all registered accounts.
+2. **Formative Assessment Activity:** The platform records **21,385 completed academic quiz attempts** across 211 live quizzes in the production database, completed by **1,942 unique student accounts** (representing a **36.5% active quiz completion rate** across total registered accounts).
+3. **Examination Calendar Seasonality:** Activity logs demonstrate acute correlation with university examination windows, recording **8,288 completed quiz attempts in January 2026** (Fall Final Exams) and **5,497 attempts in November 2025** (Midterm Exams). General platform-wide browsing (DAU/MAU) is currently unmeasured by dedicated web analytics tools.
 4. **Curriculum-Context-Aware AI (Marline):** Marline integrates structured retrieval from Alexandria University FCDS credit-hour bylaws (`faculty_courses_bylaw.json`), mapping 206 courses, prerequisites, credit hours, and Arabic/English aliases across a configured 5-tier fallback architecture (Cerebras, Groq, Google Gemini, OpenRouter, Cloudflare Workers AI). AI responses remain advisory and require human/student verification.
-5. **Operational Financial Reality:** The platform operates on a lean serverless stack (Next.js 14, Supabase PostgreSQL, Google Drive API v3, Vercel). Documented out-of-pocket base infrastructure expenses are **~\$46.25 to \$61.25 per month (~2,260 to 3,000 EGP/month)**. An enhanced institutional pilot with distributed Redis rate limiting and dedicated commercial AI quotas is estimated at **\$100 to \$150 per month (~4,900 to 7,350 EGP/month)**.
+5. **Operational Financial Reality:** The platform operates on a lean serverless stack (Next.js 14, Supabase PostgreSQL, Google Drive API v3, Vercel). Documented out-of-pocket base infrastructure expenses are **~\$46.25 to \$61.25 per month (~2,300 to 3,000 EGP/month)**. An enhanced institutional pilot with distributed Redis rate limiting and dedicated commercial AI quotas is estimated at **\$100 to \$150 per month (~4,900 to 7,350 EGP/month)**.
 
 ### Strategic Objective:
 The project team proposes a **measured, five-step institutional collaboration**, beginning with a joint academic/technical review and a **voluntary, low-stakes 15-week pilot across four foundation courses in Spring 2027**, under full departmental oversight and a balanced data governance framework.
@@ -100,8 +100,8 @@ The codebase (`src/`) and database structure (`supabase/`) were inspected to ver
                     │                                              │
 ┌───────────────────▼──────────────────┐        ┌──────────────────▼───────────────┐
 │        SUPABASE POSTGRESQL           │        │     MARLINE AI 5-TIER ROUTER      │
-│  • chameleons (5,298 accounts)       │        │  Layer 1: Cerebras (Fast Tier)   │
-│  • quiz_data (21,161 attempts)       │        │  Layer 2: Groq (Llama-3/Qwen)    │
+│  • chameleons (5,324 accounts)       │        │  Layer 1: Cerebras (Fast Tier)   │
+│  • quiz_data (21,385 attempts)       │        │  Layer 2: Groq (Llama-3/Qwen)    │
 │  • quiz_department (211 quizzes)     │        │  Layer 3: Google Gemini Flash    │
 │  • Row-Level Security (RLS)          │        │  Layer 4: OpenRouter (Backup)    │
 │  • Atomic PL/pgSQL RPC Procedures    │        │  Layer 5: Cloudflare Workers AI  │
@@ -120,11 +120,11 @@ The codebase (`src/`) and database structure (`supabase/`) were inspected to ver
 
 | Functional Module | Implementation Status | Verified Technical Details |
 |---|---|---|
-| **Formative Quizzes** | **Implemented & Verified** | 211 live quizzes in `quiz_department`; 21,161 completed attempts in `quiz_data`. Offers instant feedback mode, traditional exam mode, customizable timers (1 to 30 min, unlimited), and LaTeX formatting. |
+| **Formative Quizzes** | **Implemented & Verified** | 211 live quizzes in `quiz_department`; 21,385 completed attempts in `quiz_data`. Offers instant feedback mode, traditional exam mode, customizable timers (1 to 30 min, unlimited), and LaTeX formatting. |
 | **Marline AI Router** | **Implemented & Verified** | 5-layer configured fallback (Cerebras -> Groq -> Google -> OpenRouter -> Cloudflare). Dynamic health tracking with cooldowns. Daily question quotas (20 questions/day) deducted atomically via DB. |
 | **Bylaw Grounding Engine** | **Implemented & Verified** | `bylaw-retriever.ts` injects complete course regulations, prerequisites, credit hours, and Arabic/English aliases for 206 courses based on `faculty_courses_bylaw.json`. |
 | **Scientific Calculators** | **Implemented & Verified** | Custom `MathEngine.ts` (expression tokenizer, AST evaluation) and `MatrixEngine.ts` (LU/QR decomposition, determinants, eigenvalues, inverse) operating client-side. |
-| **Virtual Economy & Store** | **Implemented & Verified** | Server-authoritative coin crediting (`earnedCoins = ceil(score * 4.5)`). Virtual pool of 14.36M coins. Store offers profile badges, custom UI color themes, and avatar borders with zero fiat transactions. |
+| **Virtual Economy & Store** | **Implemented & Verified** | Server-authoritative coin crediting (`earnedCoins = ceil(score * 4.5)`). Virtual pool of 13.98M coins. Store offers profile badges, custom UI color themes, and avatar borders with zero fiat transactions. |
 | **Peer Summaries & Materials** | **Implemented & Verified** | Contributor upload pipeline (`/api/summaries/upload`) enforcing 50MB caps, MIME validation, and direct Google Drive folder synchronization. |
 | **Admin Operations Dashboard** | **Implemented & Verified** | User pagination, filtering by level/specialization, user ban/unban toggles, Drive folder permission sync, and academic rollover execution. |
 | **Document/PDF Parsing in Chat** | **Partially Implemented** | PDF extraction (`pdf-parse`) and DOCX parsing (`mammoth`) exist in backend routes and the `/ai` sandbox, but are not exposed in the primary `/marline` chat interface. |
@@ -181,7 +181,7 @@ Usability was evaluated across six primary personas:
 - **Friction Point:** Separate account creation creates minor friction; would benefit from university single sign-on (SSO).
 
 ### 2. The Returning Student (Levels 2, 3, and 4)
-- **Experience:** Represents **81.9%** of registered accounts (Sophomores: 1,617; Juniors: 1,631; Seniors: 857). Students filter materials by specialization (AI, CS, BA, etc.) and track elective choices.
+- **Experience:** Represents **79.5%** of registered accounts (Sophomores: 1,668; Juniors: 1,664; Seniors: 901). Students filter materials by specialization (AI, CS, BA, etc.) and track elective choices.
 - **Observed Utility:** Deep engagement with department-specific question sets (*Operating Systems*, *Computer Networks*, *Machine Learning*).
 
 ### 3. The Exam-Prep Student
@@ -194,7 +194,7 @@ Usability was evaluated across six primary personas:
 - **Boundary:** Answers include disclaimers advising students to verify formal petitions with their official department advisor.
 
 ### 5. The System Administrator
-- **Experience:** Fast pagination across 5,298 accounts, level/specialization filtering, user ban/unban toggles, and Google Drive permission sync.
+- **Experience:** Fast pagination across 5,324 accounts, level/specialization filtering, user ban/unban toggles, and Google Drive permission sync.
 - **Limitation:** Visual trend charts in `getUserAnalytics` utilize sinusoidal simulation formulas; operational reporting must rely directly on SQL table aggregations.
 
 ### 6. The Potential Course Instructor
@@ -253,39 +253,39 @@ Quiz submissions (`recordQuizCompletionAction` in `src/app/quiz/actions.ts`) are
 
 ## 9. Audited Adoption and Usage Evidence
 
-Direct read-only SQL queries executed in 15 November 2026 verified the following empirical data:
+Direct read-only SQL queries executed on **20 November 2026** verified the following empirical data:
 
-![Audited Database Baseline (15 November 2026)](diagrams/diagram_2_database_baseline.png)
+![Audited Database Baseline (20 November 2026)](diagrams/diagram_2_database_baseline.png)
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │                        AUDITED DATABASE BASELINE (NOVEMBER 2026)                       │
 │                                                                                        │
-│     5,298                 21,161                  1,926                 211            │
+│     5,324                 21,385                  1,942                 211            │
 │   REGISTERED           COMPLETED QUIZ            UNIQUE QUIZ         PRODUCTION LIVE   │
 │    ACCOUNTS               ATTEMPTS               COMPLETERS              QUIZZES       │
 │                                                                                        │
-│     8,288                  5.36 M                13.95 M                14 Mos         │
+│     8,288                  5.42 M                13.98 M                14 Mos         │
 │  PEAK MONTHLY             CONSUMED                VIRTUAL             CONTINUOUS       │
 │  QUIZZES (JAN '26)        AI TOKENS             COIN POOL              OPERATION       │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### 9.1. Registered Accounts & Cohort Breakdown
-- **Total Accounts in `chameleons`:** **5,298 registered user accounts**.
-- **Account Status:** 5,002 active; 11 banned (0.22% disciplinary rate).
+- **Total Accounts in `chameleons`:** **5,324 registered user accounts**.
+- **Account Status:** 5,028 active; 11 banned (0.21% disciplinary rate).
 - **Cohort Breakdown:**
-  - **Freshmen (Level 1):** 858 accounts (16.2%)
-  - **Sophomores (Level 2):** 1,660 accounts (31.3%)
-  - **Juniors (Level 3):** 1,656 accounts (31.3%)
-  - **Seniors (Level 4):** 897 accounts (16.9%)
-  - **Alumni / Teaching Assistants / Unassigned:** 227 accounts (4.5%)
+  - **Freshmen (Level 1):** 862 accounts (16.2%)
+  - **Sophomores (Level 2):** 1,668 accounts (31.3%)
+  - **Juniors (Level 3):** 1,664 accounts (31.3%)
+  - **Seniors (Level 4):** 901 accounts (16.9%)
+  - **Alumni / Teaching Assistants / Unassigned:** 229 accounts (4.3%)
 - **Enrollment Clarification:** These figures represent database account registrations since 25 September 2025. Official active student deduplication requires registrar cross-referencing.
 
 ### 9.2. Quiz Activity & Unique Solver Metrics
-- **Total Completed Quiz Attempts in `quiz_data`:** **21,161 attempts**.
-- **Unique Student Solvers:** **1,926 unique `auth_id`s** have completed at least one quiz.
-- **Participation Ratio:** **36.4% of total registered accounts** have actively completed assessments.
+- **Total Completed Quiz Attempts in `quiz_data`:** **21,385 attempts**.
+- **Unique Student Solvers:** **1,942 unique `auth_id`s** have completed at least one quiz.
+- **Participation Ratio:** **36.5% of total registered accounts** have actively completed assessments.
 
 ### 9.3. Academic Seasonality (Quiz Completions by Month)
 Timestamps (`solved_at`) in `quiz_data` demonstrate acute examination-period surges:
@@ -298,7 +298,7 @@ Timestamps (`solved_at`) in `quiz_data` demonstrate acute examination-period sur
 | **January 2026** | **8,288 attempts** | **Final Examination Peak (~275 quizzes/day).** |
 | **Feb – Sept 2026** | 206 attempts | Spring/Summer recess. |
 | **October 2026** | 571 attempts | Fall 2026 semester launch. |
-| **15 November 2026 (4 days)** | 262 attempts | Early November study activity (~65 quizzes/day). |
+| **1–20 November 2026** | **486 attempts** | Active Fall 2026 Midterm revision window. |
 
 *Note: General website visits (DAU/MAU) are unmeasured by dedicated web analytics tools. Quiz submissions represent the verified empirical event log.*
 
@@ -388,7 +388,7 @@ Financial requirements are structured into three distinct classifications:
 - Vercel Pro Hosting: \$20.00 / month (~980 EGP)
 - Domain Registration: ~\$1.25 / month (\$15/year / ~60 EGP)
 - AI LLM APIs: Currently utilizing developer/free tier promotional credits.
-- **Total Documented Base Infrastructure:** **~\$46.25 to \$61.25 / month (~2,260 to 3,000 EGP / month)**.
+- **Total Documented Base Infrastructure:** **~\$46.25 to \$61.25 / month (~2,300 to 3,000 EGP / month)**.
 
 ### 12.2. Estimated Future Operating Expenses for Institutional Pilot
 - Base Infrastructure (Supabase + Vercel + Domain): ~\$46.25 / month
@@ -458,16 +458,16 @@ To evaluate the alternative of developing an equivalent platform in-house:
 |---|---|---|
 | **Development Timeline** | **9 to 12 Months** (Design, development, testing, curriculum entry). | **Zero Days:** Platform is live and operational today. |
 | **Estimated Development Cost** | **~\$12,000 to \$20,000 (600k–1M EGP)** *(Industry estimate: 3 engineers x 6–9 months)*. | **\$0 Capital Expenditure:** Pre-existing software asset. |
-| **Adoption Risk** | **High:** New administrative portals often face student resistance. | **Validated Baseline:** 5,298 registered accounts and 21,161 attempts recorded. |
+| **Adoption Risk** | **High:** New administrative portals often face student resistance. | **Validated Baseline:** 5,324 registered accounts and 21,385 attempts recorded. |
 | **Curriculum Integration** | Requires months of manual data entry for 206 courses and bylaws. | **Pre-Built:** Complete FCDS curriculum and bylaw structure pre-loaded. |
-| **AI Architecture** | Multi-tier routing and bylaw grounding must be designed from scratch. | **Operational:** 5-layer router with 3.1M tokens logged and verified. |
+| **AI Architecture** | Multi-tier routing and bylaw grounding must be designed from scratch. | **Operational:** 5-layer router with 5.42M tokens logged and verified. |
 
 ---
 
 ## 16. Limitations & Items Requiring Institutional Verification
 
 To maintain complete credibility, the following limitations are formally disclosed:
-1. **Enrollment Deduplication:** Account figures (5,298) reflect database registrations; official active enrollment deduplication requires registrar validation.
+1. **Enrollment Deduplication:** Account figures (5,324) reflect database registrations; official active enrollment deduplication requires registrar validation.
 2. **Web Analytics Tracking:** Platform-wide daily and monthly active users (DAU/MAU) are not tracked; quiz completions represent the primary empirical event log.
 3. **AI Advising Boundary:** Marline is context-aware via structured bylaw retrieval, but outputs are advisory and require human/student verification.
 4. **Historical Uptime:** No third-party synthetic monitoring was active; uptime has relied on standard Vercel and Supabase availability.
