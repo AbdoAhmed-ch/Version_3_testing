@@ -1694,21 +1694,33 @@ export default function ProfilePage() {
               }
             }}
           >
-            <TabsList className="grid w-full grid-cols-3 sm:grid-cols-6 lg:w-auto lg:inline-grid bg-muted border border-border h-auto p-1 gap-1">
-              <TabsTrigger value="profile" className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 font-outfit data-[state=active]:bg-background data-[state=active]:shadow-sm py-2 md:py-1.5">
-                <User className="size-5 md:size-4" />
+            <TabsList className="grid w-full grid-cols-3 sm:grid-cols-6 lg:w-auto lg:inline-grid bg-muted/70 dark:bg-muted/40 border border-border/50 h-auto p-1 gap-1 rounded-full">
+              <TabsTrigger
+                value="profile"
+                className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 font-outfit py-2 md:py-1.5 rounded-full transition-all text-muted-foreground hover:text-foreground data-[state=active]:bg-background dark:data-[state=active]:bg-card data-[state=active]:text-foreground dark:data-[state=active]:text-white data-[state=active]:shadow-sm border border-transparent data-[state=active]:border-border/60"
+              >
+                <User className="size-5 md:size-4 shrink-0" />
                 <span className="hidden md:inline">Profile</span>
               </TabsTrigger>
-              <TabsTrigger value="academic" className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 font-outfit data-[state=active]:bg-background data-[state=active]:shadow-sm py-2 md:py-1.5">
-                <BookOpen className="size-5 md:size-4" />
+              <TabsTrigger
+                value="academic"
+                className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 font-outfit py-2 md:py-1.5 rounded-full transition-all text-muted-foreground hover:text-foreground data-[state=active]:bg-background dark:data-[state=active]:bg-card data-[state=active]:text-foreground dark:data-[state=active]:text-white data-[state=active]:shadow-sm border border-transparent data-[state=active]:border-border/60"
+              >
+                <BookOpen className="size-5 md:size-4 shrink-0" />
                 <span className="hidden md:inline">Academic Tracking</span>
               </TabsTrigger>
-              <TabsTrigger value="appearance" className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 font-outfit data-[state=active]:bg-background data-[state=active]:shadow-sm py-2 md:py-1.5">
-                <Palette className="size-5 md:size-4" />
+              <TabsTrigger
+                value="appearance"
+                className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 font-outfit py-2 md:py-1.5 rounded-full transition-all text-muted-foreground hover:text-foreground data-[state=active]:bg-background dark:data-[state=active]:bg-card data-[state=active]:text-foreground dark:data-[state=active]:text-white data-[state=active]:shadow-sm border border-transparent data-[state=active]:border-border/60"
+              >
+                <Palette className="size-5 md:size-4 shrink-0" />
                 <span className="hidden md:inline">Appearance</span>
               </TabsTrigger>
-              <TabsTrigger value="visuals" className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 font-outfit data-[state=active]:bg-background data-[state=active]:shadow-sm py-2 md:py-1.5">
-                <Zap className="size-5 md:size-4" />
+              <TabsTrigger
+                value="visuals"
+                className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 font-outfit py-2 md:py-1.5 rounded-full transition-all text-muted-foreground hover:text-foreground data-[state=active]:bg-background dark:data-[state=active]:bg-card data-[state=active]:text-foreground dark:data-[state=active]:text-white data-[state=active]:shadow-sm border border-transparent data-[state=active]:border-border/60"
+              >
+                <Zap className="size-5 md:size-4 shrink-0" />
                 <span className="hidden md:inline">Visual Effects</span>
               </TabsTrigger>
               <TabsTrigger
@@ -1718,9 +1730,9 @@ export default function ProfilePage() {
                     refreshUserReports(userData.auth_id)
                   }
                 }}
-                className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 font-outfit data-[state=active]:bg-background data-[state=active]:shadow-sm text-primary data-[state=active]:text-primary py-2 md:py-1.5 relative"
+                className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 font-outfit py-2 md:py-1.5 rounded-full transition-all text-primary hover:text-primary data-[state=active]:bg-background dark:data-[state=active]:bg-card data-[state=active]:text-primary data-[state=active]:shadow-sm border border-transparent data-[state=active]:border-border/60 relative"
               >
-                <LifeBuoy className="size-5 md:size-4" />
+                <LifeBuoy className="size-5 md:size-4 shrink-0" />
                 <span className="hidden md:inline">Reports & Issues</span>
                 {reportsFetched && userReports.filter(r => r.status === 'open' || r.status === 'in_progress').length > 0 && (
                   <span className="ml-1 px-1.5 py-0.2 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-500 border border-amber-500/30">
@@ -1728,8 +1740,11 @@ export default function ProfilePage() {
                   </span>
                 )}
               </TabsTrigger>
-              <TabsTrigger value="professional" className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 font-outfit data-[state=active]:bg-background data-[state=active]:shadow-sm text-red-500 data-[state=active]:text-red-500 py-2 md:py-1.5">
-                <Shield className="size-5 md:size-4" />
+              <TabsTrigger
+                value="professional"
+                className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 font-outfit py-2 md:py-1.5 rounded-full transition-all text-red-500 hover:text-red-400 data-[state=active]:bg-background dark:data-[state=active]:bg-card data-[state=active]:text-red-500 dark:data-[state=active]:text-red-400 data-[state=active]:shadow-sm border border-transparent data-[state=active]:border-border/60"
+              >
+                <Shield className="size-5 md:size-4 shrink-0" />
                 <span className="hidden md:inline">Security</span>
               </TabsTrigger>
             </TabsList>
