@@ -58,8 +58,8 @@
         قاعدة بيانات سوبابيز بوستجرس (SUPABASE POSTGRESQL)
       </text>
       <line x1="30" y1="52" x2="450" y2="52" stroke="#CBD5E1" stroke-width="1"/>
-      <text x="440" y="78" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• جدول chameleons <tspan fill="#64748B" font-weight="500">(5,298 حساب مستخدم مسجل)</tspan></text>
-      <text x="440" y="103" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• جدول quiz_data <tspan fill="#64748B" font-weight="500">(21,161 محاولة اختبار مكتملة)</tspan></text>
+      <text x="440" y="78" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• جدول chameleons <tspan fill="#64748B" font-weight="500">(5,342 حساب مستخدم مسجل)</tspan></text>
+      <text x="440" y="103" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• جدول quiz_data <tspan fill="#64748B" font-weight="500">(21,430 محاولة اختبار مكتملة)</tspan></text>
       <text x="440" y="128" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• جدول quiz_department <tspan fill="#64748B" font-weight="500">(211 اختبار نشط)</tspan></text>
       <text x="440" y="153" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• سياسات أمان مستوى الصف (RLS) وفهارس B-Tree</text>
       <text x="440" y="175" text-anchor="end" fill="#0F172A" font-size="13" font-weight="700" font-family="Segoe UI, Tahoma, Cairo, Arial, sans-serif">• إجراءات PL/pgSQL الذرية <tspan fill="#64748B" font-weight="500">(تسجيل العملات ورصيد الذكاء)</tspan></text>

@@ -58,8 +58,8 @@
         SUPABASE POSTGRESQL
       </text>
       <line x1="30" y1="52" x2="450" y2="52" stroke="#CBD5E1" stroke-width="1"/>
-      <text x="40" y="78" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• chameleons Table <tspan fill="#64748B" font-weight="500">(5,298 Registered Accounts)</tspan></text>
-      <text x="40" y="103" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• quiz_data Table <tspan fill="#64748B" font-weight="500">(21,161 Completed Attempts)</tspan></text>
+      <text x="40" y="78" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• chameleons Table <tspan fill="#64748B" font-weight="500">(5,342 Registered Accounts)</tspan></text>
+      <text x="40" y="103" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• quiz_data Table <tspan fill="#64748B" font-weight="500">(21,430 Completed Attempts)</tspan></text>
       <text x="40" y="128" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• quiz_department Table <tspan fill="#64748B" font-weight="500">(211 Live Quizzes)</tspan></text>
       <text x="40" y="153" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• Row-Level Security (RLS) &amp; B-Tree Performance Indexes</text>
       <text x="40" y="175" fill="#0F172A" font-size="13" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">• Atomic PL/pgSQL RPC Procedures <tspan fill="#64748B" font-weight="500">(Coins &amp; AI Credits)</tspan></text>
